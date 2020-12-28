@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link rel=icon type=image/png href=./static-artov5/icons/app-logo-128x128.png>
+    <link rel=icon type=image/png sizes=192x192 href=./static-artov5/icons/android-icon-192x192.png>
+    <link rel=icon type=image/png sizes=32x32 href=./static-artov5/icons/favicon-32x32.png>
+    <link rel=icon type=image/png sizes=96x96 href=./static-artov5/icons/favicon-96x96.png>
+    <link rel=icon type=image/png sizes=16x16 href=./static-artov5/icons/favicon-16x16.png>
+    <link rel=icon type=image/ico href=./static-artov5/icons/favicon.ico>
+    <link rel=apple-touch-icon sizes=57x57 href=./static-artov5/icons/apple-icon-57x57.png>
+    <link rel=apple-touch-icon sizes=60x60 href=./static-artov5/icons/apple-icon-60x60.png>
+    <link rel=apple-touch-icon sizes=72x72 href=./static-artov5/icons/apple-icon-72x72.png>
+    <link rel=apple-touch-icon sizes=76x76 href=./static-artov5/icons/apple-icon-76x76.png>
+    <link rel=apple-touch-icon sizes=114x114 href=./static-artov5/icons/apple-icon-114x114.png>
+    <link rel=apple-touch-icon sizes=120x120 href=./static-artov5/icons/apple-icon-120x120.png>
+    <link rel=apple-touch-icon sizes=144x144 href=./static-artov5/icons/apple-icon-144x144.png>
+    <link rel=apple-touch-icon sizes=152x152 href=./static-artov5/icons/apple-icon-152x152.png>
+    <link rel=apple-touch-icon sizes=180x180 href=./static-artov5/icons/apple-icon-180x180.png>
+    <title>ARTOv5 - Augmented Reality Try-On based on BRFv5 by Tastenkunst</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #333334;
+            -ms-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -webkit-text-size-adjust: none;
+        }
+        
+        #__artov5 {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: transparent;
+        }
+    </style>
+    <script defer src=./static-artov5/artov5.config.js></script>
+    <script defer src=./static-artov5/artov5.config.sv.js></script>
+    <script defer src=./static-artov5/artov5.api.common.js></script>
+    <script defer src=./static-artov5/artov5.api.sv.js></script>
+    <script defer src=./static-artov5/artov5.api.custom.mats.js></script>
+    <script defer src=./static-artov5/artov5.api.custom.js></script>
+    <link href=static-artov5/css/app.4696e920.css rel=preload as=style>
+    <link href=static-artov5/js/app.beb8071e.js rel=preload as=script>
+    <link href=static-artov5/js/chunk-vendors.94df41a0.js rel=preload as=script>
+    <link href=static-artov5/css/app.4696e920.css rel=stylesheet>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</head>
+
+<body>
+    <noscript><strong>We're sorry but artov5-ext doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+    <div>
+      <div id=__artov5>
+          <div id=__artov5__app></div>
+      </div>
+      <div id="content">
+        <div id="splash_dialog">
+          <div class="vertical_center">
+            <p>
+              <img src="image/Zoggs.png" class="splash_text1"alt="">
+            </p>
+            <p>
+              <img src="image/Face.png" class="splash_face"alt="">
+            </p>
+            <p>
+              <img src="image/Find Your Goggle Fit.png" class="splash_text2"alt="">
+            </p>
+          </div> 
+        </div>
+        <div id="select_dialog">
+          <p class="select_title">SELECT GENDER</p>
+          <div id="first_group_btn">
+            <p><button id="hello" class="button first_btn" onclick = "myFunction()">MALE</button></p>
+            <p><button class="button first_btn" onclick = "myFunction()">FEMALE</button></p>
+            <p><button class="button first_btn" onclick = "myFunction()">PREFER NOT TO SAY</button></p>
+          </div>  
+          <p class="select_title">FIT PREFERENCE</p>
+          <div id="second_group_btn">
+            <p><button class="button second_btn" onclick = "myFunction()">INSIDE EYE SOCKET</button></p>
+            <p><button class="last_button button second_btn" onclick = "myFunction()">OUTSIDE EYE SOCKET</button></p>
+          </div>
+          <p class="loading_circle">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </p>
+        </div>
+        <div id="range_dialog">
+          <div>
+            <p class="range_title">TAP SELECTION</p>
+            <p class="range_title">TO CONTINUE</p>
+          </div>
+          <p><img src="image/Predator Flex.png" alt="" class="Predator_flex"></p>
+          <div>
+            <p class="range_text">The ultimate in flexibility, with our 3D</p>
+            <p class="range_text">Flex <sup>TM</sup> technology & V-Groove for</p>
+            <p class="range_text">enhanced contouring to your face</p>
+          </div>
+          <p><img src="image/Predator.png" alt="" class="Predator"></p>
+          <div class="range_second">
+            <p class="range_text">The ultra-durable Wiro Frame</p>
+            <p class="range_text">streamlines to your face, whilst our</p>
+            <p class="range_text">unique Blo-Tech <sup>TM</sup> lightens pressure</p>
+            <p class="range_text">around your eyes</p>
+          </div>
+          <p class="loading_circle">
+            <span class="dot"></span>
+            <span class="dot white_dot"></span>
+            <span class="dot"></span>
+          </p>
+        </div>
+        <div id="scan_dialog">
+          <p class="scan_title">HOW TO SCAN</p>
+          <p class="scan_text">FOR YOUR RECOMMENDED</p>
+          <p class="scan_text">GOGGLE SIZE</p>
+          <p><img src="image/Face Scan Icon.png" alt=""></p>
+          <div class="scan_process">
+            <div class="circle_number first">1</div>
+            <div class="scan_text process_first">Position your face inside the <br> head outline</div>
+          </div>
+          <div class="scan_process">
+            <div class="circle_number second">2</div>
+            <div class="scan_text process_second">Look straight ahead with a <br> relaxed expression, whilst we take <br> your measurements</div>
+          </div>
+          <div class="clearfix"></div>
+          <p class="ready_text">I'M READY</p>
+          <p class="loading_circle">
+            <span class="dot"></span>
+            <span class="dot white_dot"></span>
+            <span class="dot white_dot"></span>
+          </p>
+        </div>
+        <div id="loading_dialog">
+          <div id="myProgress">
+            <div id="myBar"></div>
+          </div>
+          <P id="loading_text">CALCULATING...</P>
+        </div>
+        <div id="recommend_dialog">
+          <p class="recommend_first">WE RECOMMEND </p>
+          <p class="recommend_second">SMALL PROFILE FIT</p>
+          <p><img src="image/goggles.png" alt="" class="goggles"></p>
+          <p class="recommend_text_first">for smaller faces or inner</p>
+          <p class="recommend_text_second">eye socket fit</p>
+          <p class="recommend_view">VIEW LIVE</p>
+        </div>
+        <div id="AR_dialog">
+          <div>
+            <img src="image/Zoggs.png" alt="" class="logo">
+          </div>
+          <p class="exit_btn">
+            <img src="image/Exit Icon.png" alt="">
+          </p>
+          <p class="camera_btn">
+            <img src="image/cam icon.png" alt="">
+          </p>
+          <div class="AR_wrap">
+            <div id="AR_bottom">
+              <hr>
+              <div id="owl-demo" class="owl-carousel owl-theme">
+          
+                <div class="item"><img src="image/01.png" alt="Owl Image" class="model"></div>
+                <div class="item"><img src="image/02.png" alt="Owl Image" class="model"></div>
+                <div class="item"><img src="image/03.png" alt="Owl Image" class="model"></div>
+                <div class="item"><img src="image/04.png" alt="Owl Image" class="model"></div>
+                <div class="item"><img src="image/05.png" alt="Owl Image" class="model"></div>
+                <div class="item"><img src="image/06.png" alt="Owl Image" class="model"></div>
+                <div class="item"><img src="image/07.png" alt="Owl Image" class="model"></div>
+               
+              </div>
+              <p class="AR_text_first">
+                Predator Flex Titanium
+              </p>
+              <p class="AR_text_second">
+                Premium strap with outer or inner orbit gasket for <br> maximum performance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <div id="share_dialog">
+          <div>
+            <img src="image/Zoggs.png" alt="" class="logo">
+          </div>
+          <p class="exit_btn">
+            <img src="image/Exit Icon.png" alt="">
+          </p>
+          <p class="camera_btn">
+            <img src="image/cam icon.png" alt="">
+          </p>
+          <div class="AR_wrap">
+            <div id="share_content">
+              <p class="share_cancel">
+                <img src="image/x icon.png" alt="">
+              </p>
+              <p class="share_range">
+                <img src="image/Predator Range Logo.png" alt="">
+              </p>
+              <p class="share_text1">You look great!</p>
+              <p class="share_text2">Want to share your new look with friends?</p>
+              <p class="share_btn">
+                SHARE
+              </p>
+            </div>
+            <div id="AR_bottom">
+              <hr>
+              <div class="slider responsive goggles_slide">
+                <div>
+                  <img src="image/01.png" alt="">
+                </div>
+                <div>
+                  <img src="image/02.png" alt="">
+                </div>
+                <div>
+                  <img src="image/03.png" alt="">
+                </div>
+                <div>
+                  <img src="image/04.png" alt="">
+                </div>
+                <div>
+                  <img src="image/05.png" alt="">
+                </div>
+                <div>
+                  <img src="image/06.png" alt="">
+                </div>
+                <div>
+                  <img src="image/07.png" alt="">
+                </div>
+              </div>
+              <p class="AR_text_first">
+                Predator Flex Titanium
+              </p>
+              <p class="AR_text_second">
+                Premium strap with outer or inner orbit gasket for <br> maximum performance.
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+
+      </div>
+    </div>
+      
+    <script src=static-artov5/js/chunk-vendors.94df41a0.js></script>
+    <script src=static-artov5/js/app.beb8071e.js></script>
+</body>
+
+</html>
